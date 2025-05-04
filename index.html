@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="color" placeholder="Enter Color">
+   <button id="colorButton">Submit</button><br>
+   <input type="text" id="text" placeholder="Enter Text">
+   <button id="textButton">Submit</button><br>
+   <div id="one">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptate velit, aspernatur distinctio aperiam eaque eius dolorum labore asperiores illo quas nisi sed inventore provident cum laboriosam nostrum. Ipsam, mollitia.
+   </div> 
+</body>
+</html>
+<script>
+   let col=document.getElementById('colorButton');
+   col.addEventListener('click',()=>{
+    let x=document.getElementById('color').value;
+   if(x){
+    document.getElementById('one').style.backgroundColor=x;
+   }else alert('Enter valid color') 
+   })
+   let tex=document.getElementById('textButton');
+   tex.addEventListener('click',()=>{
+    let y=document.getElementById('text').value;
+   if(y==''){
+    alert('Please enter something')
+   }else{
+        z=document.getElementById('one');
+        z.innerText=y;
+   }
+   })
+   
+</script>
